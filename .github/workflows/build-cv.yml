@@ -1,0 +1,55 @@
+name: Build CV PDF
+
+on:
+  push:
+    branches: [master, main]
+    paths:
+      - "cv.md"
+      - "style.css"
+      - ".github/workflows/build-cv.yml"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Pandoc + weasyprint dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y pandoc weasyprint fonts-dejavu
+
+      - name: Build HTML (intermediate)
+        run: |
+          pandoc cv.md \
+            --standalone \
+            --css style.css \
+            --metadata title="CV" \
+            --to html5 \
+            -o cv.html
+
+      - name: Build PDF via WeasyPrint
+        run: |
+          weasyprint cv.html cv.pdf
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cv-pdf
+          path: cv.pdf
+          retention-days: 30
+
+      # Opcional: crear/actualizar un release con el PDF
+      - name: Release PDF
+        if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: "CV – latest"
+          files: cv.pdf
+          body: "PDF generado automáticamente desde `cv.md`"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

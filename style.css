@@ -1,0 +1,165 @@
+/* ===================================================
+   CV – Developer Style
+   Used by Pandoc via --css or WeasyPrint
+   =================================================== */
+
+:root {
+  --accent:   #00b4d8;
+  --dark:     #0d1117;
+  --mid:      #161b22;
+  --border:   #30363d;
+  --text:     #e6edf3;
+  --muted:    #8b949e;
+  --font-mono: "JetBrains Mono", "Fira Code", "Courier New", monospace;
+  --font-body: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: var(--dark);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 10.5pt;
+  line-height: 1.6;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 32px 40px;
+}
+
+/* --- Headings --- */
+h1 {
+  font-size: 2em;
+  font-family: var(--font-mono);
+  color: var(--accent);
+  letter-spacing: -0.5px;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+}
+
+h1 + p {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 4px;
+  margin: 28px 0 12px;
+}
+
+h3 {
+  font-size: 1em;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+h3 + p {
+  font-family: var(--font-mono);
+  font-size: 0.78em;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+/* --- Horizontal rule --- */
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 20px 0;
+}
+
+/* --- Paragraphs & lists --- */
+p { margin-bottom: 8px; }
+
+ul {
+  padding-left: 1.4em;
+  margin-bottom: 10px;
+}
+
+ul li { margin-bottom: 3px; }
+
+/* --- Inline code (used for dates/tags) --- */
+code {
+  font-family: var(--font-mono);
+  font-size: 0.82em;
+  background: var(--mid);
+  color: var(--accent);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1px 6px;
+}
+
+/* --- Tables --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 14px;
+  font-size: 0.9em;
+}
+
+thead tr {
+  background: var(--mid);
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  text-align: left;
+  padding: 6px 10px;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+td {
+  padding: 5px 10px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+
+tr:last-child td { border-bottom: none; }
+
+/* --- Strong / em --- */
+strong { color: #cdd9e5; font-weight: 600; }
+em     { color: var(--muted); font-style: normal; }
+
+/* --- Links --- */
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* --- Print / PDF tweaks --- */
+@media print {
+  html, body {
+    background: #fff;
+    color: #111;
+    padding: 0;
+    font-size: 10pt;
+  }
+
+  :root {
+    --accent:  #0077a8;
+    --dark:    #fff;
+    --mid:     #f0f0f0;
+    --border:  #ccc;
+    --text:    #111;
+    --muted:   #555;
+  }
+
+  h1 { border-bottom-color: #0077a8; }
+  code { background: #f0f0f0; border-color: #ccc; }
+  a { color: #0077a8; }
+
+  /* Avoid page breaks inside sections */
+  h2, h3 { page-break-after: avoid; }
+  ul, table { page-break-inside: avoid; }
+}
