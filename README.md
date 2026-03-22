@@ -1,44 +1,44 @@
 # cv
 
-> CV generado automáticamente como PDF desde Markdown, via Pandoc + WeasyPrint + GitHub Actions.
+> CV auto-generated as PDF from Markdown, via Pandoc + WeasyPrint + GitHub Actions.
 
-## Estructura
+## Structure
 
 ```
 .
-├── cv.md                          # Fuente del CV (edita esto)
-├── style.css                      # Estilos dark/developer para HTML y PDF
+├── cv.md                          # CV source — edit this
+├── style.css                      # Dark/developer theme for HTML and PDF
 └── .github/
     └── workflows/
-        └── build-cv.yml           # Pipeline de build automático
+        └── build-cv.yml           # Automatic build pipeline
 ```
 
-## Cómo funciona
+## How it works
 
-1. Editas `cv.md` y haces push a `master`
-2. GitHub Actions ejecuta el workflow:
-   - Instala Pandoc + WeasyPrint
-   - Convierte `cv.md` → `cv.html` (con `style.css` embebido)
-   - Convierte `cv.html` → `cv.pdf` via WeasyPrint
-3. El PDF se sube como **artifact** (disponible 30 días) y como **Release `latest`**
+1. Edit `cv.md` and push to `master`
+2. GitHub Actions runs the workflow:
+   - Installs Pandoc + WeasyPrint
+   - Converts `cv.md` → `cv.html` (with `style.css`)
+   - Converts `cv.html` → `cv.pdf` via WeasyPrint
+3. The PDF is uploaded as an **artifact** (retained 30 days) and published as a **`latest` Release**
 
-## Build local
+## Local build
 
 ```bash
-# Instalar dependencias (Ubuntu/Debian/Fedora)
+# Install dependencies
 sudo apt install pandoc weasyprint          # Debian/Ubuntu
 sudo dnf install pandoc python3-weasyprint  # Fedora
 
-# Generar HTML
+# Generate HTML
 pandoc cv.md --standalone --css style.css --to html5 -o cv.html
 
-# Generar PDF
+# Generate PDF
 weasyprint cv.html cv.pdf
 ```
 
-## Personalización
+## Customisation
 
-- **Contenido:** edita `cv.md` — usa `code inline` para fechas/tags, tablas para skills.
-- **Colores:** cambia `--accent` en `style.css` (actualmente `#00b4d8`).
-- **Fuentes:** ajusta `--font-mono` y `--font-body` en `:root`.
-- **Print:** el bloque `@media print` en `style.css` convierte el tema dark a blanco para impresión física.
+- **Content:** edit `cv.md` — use `inline code` for dates/tags, tables for skills.
+- **Colours:** change `--accent` in `style.css` (currently `#00b4d8`).
+- **Fonts:** adjust `--font-mono` and `--font-body` in `:root`.
+- **Print:** the `@media print` block in `style.css` switches the dark theme to white for physical printing.

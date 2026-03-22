@@ -9,6 +9,9 @@ on:
       - ".github/workflows/build-cv.yml"
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -17,12 +20,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install Pandoc + weasyprint dependencies
+      - name: Install Pandoc and WeasyPrint
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y pandoc weasyprint fonts-dejavu
 
-      - name: Build HTML (intermediate)
+      - name: Build HTML
         run: |
           pandoc cv.md \
             --standalone \
@@ -42,14 +45,12 @@ jobs:
           path: cv.pdf
           retention-days: 30
 
-      # Opcional: crear/actualizar un release con el PDF
       - name: Release PDF
-        if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main'
         uses: softprops/action-gh-release@v2
         with:
           tag_name: latest
           name: "CV – latest"
           files: cv.pdf
-          body: "PDF generado automáticamente desde `cv.md`"
+          body: "PDF auto-generated from `cv.md`"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
