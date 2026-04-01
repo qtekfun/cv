@@ -105,7 +105,8 @@ Developed two mission-critical C++17 microservices for Ericsson's live 5G Core. 
 ---
 
 ## Certifications
-
+ 
+- Introduction to GitOps (LFS169) — Linux Foundation / CNCF, 2026
 - Introduction to Cloud Infrastructure Technologies (LFS151) — Linux Foundation, 2026
 - GitOps Fundamentals — Codefresh / CNCF, 2026
 - Introduction to Cybersecurity — Cisco Networking Academy
