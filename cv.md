@@ -106,7 +106,12 @@ Developed two mission-critical C++17 microservices for Ericsson's live 5G Core. 
 
 ## Certifications
 
-EF SET English C2 (81/100) · [cert.efset.org/DfLkb1](https://cert.efset.org/DfLkb1) · Kubernetes & Docker (Udemy, 2020) · GitOps Fundamentals (Codefresh / CNCF) · Introduction to Cybersecurity (Cisco)
+- Introduction to Cloud Infrastructure Technologies (LFS151) — Linux Foundation, 2026
+- GitOps Fundamentals — Codefresh / CNCF, 2026
+- Introduction to Cybersecurity — Cisco Networking Academy
+- EF SET English Certificate C2 (81/100) — EF Education First · [cert.efset.org/DfLkb1](https://cert.efset.org/DfLkb1)
+- Kubernetes: Beginner to Expert — Udemy, 2020
+- Docker: Beginner to Expert — Udemy, 2020
 
 **Languages:** Spanish (native) · English (C2 — bilingual)
 
