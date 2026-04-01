@@ -1,160 +1,186 @@
-# Cipriano Moreno
+# Cipriano Moreno Mateos
 
-**Engineering Lead · DevOps · Systems**
-`cmorenomateos@gmail.com` · `github.com/qtekfun` · `qtekfun.com` · `Spain`
+**Engineering Lead · Head of Engineering · DevOps & Platform**
+
+`cmorenomateos@gmail.com` · [github.com/qtekfun](https://github.com/qtekfun) · [qtekfun.com](https://qtekfun.com) · [linkedin.com/in/cmorenomateos](https://linkedin.com/in/cmorenomateos) · Madrid, Spain · Open to remote
 
 ---
 
-## Technical Skills
+## Summary
 
-| Category           | Technologies                                                                   |
-|--------------------|--------------------------------------------------------------------------------|
-| Languages          | C++23, Python, Ada95, Bash, PHP, JavaScript, Java, LabVIEW, Visual Basic      |
-| Infrastructure     | Kubernetes, Docker, AWS EC2, Proxmox, Ansible, Terraform                       |
-| CI/CD              | Jenkins (Shared Libraries/Groovy), GitHub Actions, Spinnaker, SonarQube        |
-| Networking & Sec   | Traefik, WireGuard, Tailscale, Istio, mTLS, VPN                                |
-| Observability      | Prometheus, Grafana, Kibana, Splunk                                             |
-| Protocols          | Kafka, HTTP/2, Diameter, Wireshark/pcap                                         |
-| Databases          | SQL, PostgreSQL                                                                 |
-| Methodologies      | Scrum, Kanban, Shift-Left, GitOps, DevEx                                        |
-| Management         | Engineering Management, Roadmapping, Mentoring, Stakeholder Management         |
+Engineering leader with 12+ years of experience spanning mission-critical embedded systems (Airbus, Fly-By-Wire), 5G Core microservices (Ericsson), and large-scale DevOps transformations. Currently heading a 24-engineer multidisciplinary department at Jungheinrich Digital Solutions Spain, with direct responsibility over engineering culture, individual career growth, and cross-border delivery coordination with Germany and Austria.
+
+My focus as a leader is human-first: I invest heavily in one-to-ones, removing friction from engineers' day-to-day, and building the psychological safety and clarity that let teams do their best work. On the technical side, I bring genuine depth in platform engineering, CI/CD, and distributed systems — and I stay current by running a 35+ service self-hosted infrastructure stack as a personal engineering lab.
+
+---
+
+## Core Competencies
+
+**Engineering Leadership** · Team Building & Mentoring · Career Development · 1:1 Coaching · Hiring · Stakeholder Management · Cross-functional Coordination · Engineering Culture · DevEx
+
+**Platform & Infrastructure** · Kubernetes · Docker · Proxmox · Ansible · Terraform · AWS EC2 · Traefik · WireGuard · Tailscale
+
+**CI/CD & DevOps** · Jenkins (Shared Libraries / Groovy) · GitHub Actions · Forgejo Actions · Spinnaker · SonarQube · GitOps · Shift-Left · Renovate
+
+**Observability** · Prometheus · Grafana · Splunk · Kibana
+
+**Security** · Istio / mTLS · CrowdSec · Authelia (SSO / 2FA) · WireGuard · Zero Trust Networking
+
+**Languages & Runtimes** · C++23 · Python · Bash · Ada95 · PHP · JavaScript · Java · LabVIEW
+
+**Protocols & Systems** · Kafka · HTTP/2 · Diameter · Wireshark / pcap · Microservices · Service Mesh
+
+**Methodologies** · Scrum · Kanban · Scaled Agile · Shift-Left · GitOps
 
 ---
 
 ## Experience
 
-### Team Lead Software & Engineering Services · Jungheinrich Digital Solutions Spain
+### Team Lead — Software & Engineering Services · Jungheinrich Digital Solutions Spain
 `Feb 2026 – Present · Madrid, Spain`
 
-- Direct management of a 24-engineer multidisciplinary department across Legacy (C++/Python), Web (PHP/JS), and critical systems (PLM/ALM) stacks.
-- Scaled Agile methodologies (Scrum/Kanban): ceremonies, estimation sessions, and capacity planning.
-- Technical and operational coordination with headquarters in **Germany and Austria**.
-- Focus on Time-to-Market reduction and embedding DevOps culture across the full SDLC.
-- Career path definition and technical mentoring across the team.
+Leading a 24-engineer multidisciplinary department across Legacy (C++ / Python), Web (PHP / JS), and critical systems (PLM / ALM) stacks.
+
+- Direct management of 24 engineers across 3 technical domains: individual growth plans, performance, hiring, and day-to-day support.
+- Strong focus on the human side of engineering management: structured 1:1s, career pathing, removing friction, and reducing the psychological overhead that kills team velocity.
+- Primary engineering interface for headquarters in Germany and Austria — roadmap alignment, delivery commitments, and escalation management.
+- Driving Agile ceremonies (Scrum / Kanban) across multiple concurrent product streams.
+
+---
 
 ### Product Development Team Lead & DevOps Ambassador · Jungheinrich Digital Solutions Spain
-`Jun 2024 – Feb 2026 (1 year 9 months) · Madrid, Spain`
+`Jun 2024 – Feb 2026 · Madrid, Spain`
 
-- Cross-functional technical leadership across C++, Python, PHP, and JS profiles.
-- Designed and implemented the **global DevOps strategy**: full VCS migration to GitHub.
-- CI/CD pipeline optimisation with a **Shift-Left** approach (pre-merge validation), significantly reducing production defects.
-- Led **GenAI/Prompt Engineering** adoption for full-stack development of an internal pipeline orchestration tool (Python/JS), drastically cutting deployment and validation times.
+Cross-functional technical leadership across C++, Python, PHP, and JS profiles. Internal champion for DevOps adoption across the engineering org.
+
+- **Release orchestration platform:** Designed and co-built an internal tool (Python / Uvicorn backend + JS frontend) that replaced a manual, VM-reservation-based release process. The new system orchestrates artifact creation and installer generation across two Jenkins pipelines on a shared resource stack — with RBAC, user management, and real-time build monitoring. Result: **5× release throughput with one-third of the previous resource footprint**.
+- **VCS migration:** Led the company-wide migration to GitHub, establishing branching strategies, protected branches, and code review standards across all teams.
+- **Shift-Left CI/CD:** Redesigned CI pipelines with pre-merge validation gates (static analysis, unit tests, vulnerability scanning), reducing production defects and shortening feedback loops for developers.
+- **GenAI adoption:** Led a Prompt Engineering initiative for internal tooling development (Python / JS), significantly accelerating deployment and validation cycles.
+- **Stakeholder management:** Coordinated with product, operations, and HQ engineering leadership (Germany / Austria) on roadmap alignment.
+
+---
 
 ### DevOps Lead · Jungheinrich Digital Solutions Spain
-`Jan 2023 – Jun 2024 (1 year 6 months) · Madrid, Spain`
+`Jan 2023 – Jun 2024 · Madrid, Spain`
 
-- Automated build and deployment nodes on **Windows** environments using Ansible.
-- Managed **AWS EC2** instances for toolchain update orchestration.
-- Redesigned **Jenkins** architecture using Shared Libraries (Groovy) with integrated static analysis and vulnerability scanning.
-- Supported C++ package management migration and CMake toolchain updates on Windows.
+- Redesigned Jenkins CI architecture using Shared Libraries (Groovy), standardising build and validation pipelines across 10+ projects and eliminating duplicated pipeline logic across teams.
+- Led migration of release scripts from shared network disks to JFrog Artifactory, modernising artifact management and making releases reproducible and auditable across all affected projects.
+- Automated Windows build and deployment node provisioning using Ansible, removing manual setup from the release process.
+- Managed AWS EC2 instances for toolchain update orchestration and release automation.
+- Supported C++ package management migration and CMake toolchain updates across Windows environments.
+
+---
 
 ### IT Manager (Part-Time Consultancy) · TESTAMENTARIA SL
 `Dec 2022 – Present · Madrid, Spain`
 
-- Technology strategy and Digital Workplace modernisation.
-- Designed and deployed corporate VPN with **Tailscale**. NAS backup management and health monitoring.
-- Python/Bash automation: migration of 25,000+ contacts to Google Workspace.
-- IT Procurement: hardware lifecycle management and asset acquisition.
-
-### R&D Microservices SW Engineer · 5G Core · Ericsson (via Blue Telecom)
-`Apr 2021 – Jan 2023 (1 year 10 months) · Madrid, Spain`
-
-- Development and maintenance of **two mission-critical microservices** for Ericsson's 5G Core in C++17.
-- Inter-service communication via **Kafka, HTTP, HTTP/2, and Diameter**.
-- Deployment on **Kubernetes** clusters with Istio (Service Mesh) and mTLS.
-- Network troubleshooting with Wireshark (pcap). Monitoring with Prometheus, Grafana, and Kibana.
-- CI/CD pipelines in **Jenkins + SonarQube** and deployment via **Spinnaker**. Scrum + Gerrit.
-
-### Senior Software Engineer · Airbus Defence and Space (via CT Ingenieros)
-`Oct 2018 – Apr 2021 (2 years 7 months) · Madrid, Spain`
-
-- Development of the **Flight Mission Planning System** in C++14 / SQL on Windows.
-- Responsible for the **Windows 10 migration** of a video player synchronised with aircraft routes, maintaining strict legacy compatibility.
-- On-site deployment at operational units. Technical documentation under **ISO 9001 and ISO 9100**.
-
-### Senior Software Engineer · Indra
-`Oct 2016 – Oct 2018 (2 years 1 month) · Madrid, Spain`
-
-- Development of Indra's **Air Traffic Management (ATM)** system for the DFS client (Germany).
-- Technical lead of a 3-person team. SQL / PostgreSQL data model design and internal API development.
-- C++ and Ada95 backend on Linux. Automated tagging scripts for IBM Clearcase.
-
-### Software Developer · Airbus Defence and Space (via Orbital Critical Systems)
-`Nov 2015 – Oct 2016 (1 year) · Madrid, Spain`
-
-- Development of **certified embedded Fly-By-Wire software** for the Casa C295 aircraft (project FT4B).
-- Flight computer programming (ailerons, VTP, HTP) in **Ada95 / GNAT on VxWorks RTOS** (16 ms execution cycle).
-- Internal Python tool to automate SEAS test result validation with signal graph generation.
-
-### Software Developer · Indra Group (via Panel Sistemas Informáticos)
-`Oct 2014 – Nov 2015 (1 year 2 months) · Madrid, Spain`
-
-- Internal data access API for the ATM system. SQL / PostgreSQL data model design.
-- C++ and Ada95 backend on Linux. Unit testing.
-
-### Software Developer & Technical Sales Engineer · Ala2 Ingenieros S.L.
-`Oct 2011 – Oct 2014 (3 years 1 month) · Madrid, Spain`
-
-- Custom software development for the aeronautical sector (C++, LabVIEW, VB, Java).
-- Project leadership with MS Project planning. Full technical sales cycle management and client training.
-- Technical documentation under ISO 9001 and ISO 9100.
+- Designed and deployed corporate VPN with Tailscale; manages NAS backup and health monitoring.
+- Automated migration of 25,000+ contacts to Google Workspace using Python / Bash scripting.
+- Owns IT procurement: hardware lifecycle, asset acquisition, and digital workplace strategy.
 
 ---
 
-## Projects / Homelab
+### R&D Microservices Software Engineer — 5G Core · Ericsson (via Blue Telecom)
+`Apr 2021 – Jan 2023 · Madrid, Spain`
 
-### `homelab-2026` — Self-hosted Infrastructure Stack
+Developed and maintained two mission-critical microservices within Ericsson's 5G Core network infrastructure — software running in live production carrier networks.
+
+- **Stack:** C++17, Kafka, HTTP/2, Diameter, Kubernetes (Istio service mesh, mTLS), Prometheus, Grafana, Kibana.
+- **CI/CD:** Jenkins + SonarQube pipelines; production deployments via Spinnaker. Scrum + Gerrit.
+- **Reliability:** Network-level troubleshooting using Wireshark / pcap in carrier-grade environments.
+
+---
+
+### Senior Software Engineer · Airbus Defence and Space (via CT Ingenieros)
+`Oct 2018 – Apr 2021 · Madrid, Spain`
+
+- Developed the **Flight Mission Planning System** in C++14 / SQL on Windows for operational military aircraft.
+- Led the Windows 10 migration of a video player synchronised with aircraft routes, maintaining strict backward compatibility under ISO 9001 / 9100.
+- On-site deployment at operational military units.
+
+---
+
+### Senior Software Engineer · Indra
+`Oct 2016 – Oct 2018 · Madrid, Spain`
+
+- Technical lead of a 3-person team developing the **Air Traffic Management (ATM)** system for DFS (German air navigation service provider).
+- Designed SQL / PostgreSQL data models and internal APIs. C++ and Ada95 backend on Linux.
+
+---
+
+### Software Developer · Airbus Defence and Space (via Orbital Critical Systems)
+`Nov 2015 – Oct 2016 · Madrid, Spain`
+
+- Developed **certified Fly-By-Wire software** for the CASA C295 military transport aircraft (FT4B project).
+- Ada95 / GNAT on VxWorks RTOS with a 16 ms hard real-time execution cycle (ailerons, VTP, HTP flight computers).
+- Built internal Python tooling to automate SEAS test result validation with signal graph generation.
+
+---
+
+### Software Developer · Indra Group (via Panel Sistemas Informáticos)
+`Oct 2014 – Nov 2015 · Madrid, Spain`
+
+Internal data access API for the ATM system. SQL / PostgreSQL data model design. C++ and Ada95 on Linux. Unit testing.
+
+---
+
+### Software Developer & Technical Sales Engineer · Ala2 Ingenieros S.L.
+`Oct 2011 – Oct 2014 · Madrid, Spain`
+
+Custom software for the aeronautical sector (C++, LabVIEW, VB, Java). Full technical sales cycle, client training, and ISO 9001 / 9100 documentation.
+
+---
+
+## Projects
+
+### `homelab-2026` — Self-Hosted Infrastructure Platform
 `github.com/qtekfun · qtekfun.com`
 
-Docker stack of ~35 services on Proxmox + Ubuntu VM, managed as a mono-repo with a custom CI/CD pipeline.
+Production-grade self-hosted platform of 35+ Docker services on Proxmox + Ubuntu VM, managed as a GitOps mono-repo with a CI/CD pipeline via Forgejo Actions. This is where I validate the same patterns I advocate at work — GitOps, security hardening, observability, and zero-downtime deployments — with full ownership of every layer.
 
-| Layer                 | Services                                                                          |
-|-----------------------|-----------------------------------------------------------------------------------|
-| Reverse proxy & Auth  | Traefik, Authelia (SSO/2FA), CrowdSec (IDS/IPS)                                  |
-| Remote access         | WireGuard (`10.13.13.0/24`), Tailscale                                            |
-| Storage               | Nextcloud (×2), Immich, CouchDB (Obsidian LiveSync)                               |
-| Automation            | n8n, Guacamole, Portainer                                                         |
-| Observability         | Grafana, Prometheus, Splunk (HEC + Traefik JSON logs + CrowdSec + Proxmox syslog)|
-| DNS & Connectivity    | ddclient (DDNS), Cloudflare (no proxy — Nextcloud large file compatibility)       |
-| CI/CD & Versioning    | Forgejo, Renovate (`datasource=docker`), pre-commit hooks                         |
+| Layer | Services |
+|---|---|
+| Reverse proxy & Auth | Traefik, Authelia (SSO / 2FA), CrowdSec |
+| Remote access | WireGuard (`10.13.13.0/24`), Tailscale |
+| Storage & Sync | Nextcloud, Immich, CouchDB (Obsidian LiveSync) |
+| Automation | n8n, Guacamole, Portainer |
+| Observability | Grafana, Prometheus, Splunk (HEC ingestion) |
+| CI/CD & Versioning | Forgejo, Renovate (datasource=docker), pre-commit hooks |
 
 **Engineering highlights:**
 
-- **Image hardening:** `cap_drop: ALL` with selective `cap_add`, s6-overlay compatibility analysis, custom healthchecks for Portainer and Obsidian.
-- **Version-pinning:** `renovate: datasource=docker` annotations on every image; automatic update PRs.
-- **GitOps:** branch protection on `master`, atomic commits per service, pre-commit hooks for `docker-compose` validation.
-- **Security perimeter:** Authelia middleware audit — identified and remediated exposed services without SSO (n8n, Grafana, Kasm).
-- **Observability pipeline:** Splunk ingestion from CrowdSec via HEC, Traefik JSON logs, Proxmox syslog, and FritzBox syslog.
-
-### Privacy & Mobile Infrastructure
-
-- **GrapheneOS** on Pixel 10 Pro Fold — full mobile environment installation and hardening.
-- **Gadgetbridge** integrated with Garmin Fenix 7S Pro Solar (no proprietary app or telemetry).
-- Brave Flatpak with custom NSS store (`~/.var/app/com.brave.Browser/.pki/nssdb`).
+- **GitOps:** Branch protection on `master`, atomic commits per service, pre-commit `docker-compose` validation, Renovate auto-PRs on every image.
+- **Security:** Authelia SSO/2FA across all exposed services; CrowdSec for threat detection; supply chain incident response (Trivy action and LiteLLM PyPI compromises) with SHA-pinned workflows.
+- **IaC:** Ansible playbooks for Proxmox host and Ubuntu VM provisioning, SSH hardening, UFW rules — documented in a professional `SPEC.md`.
 
 ---
 
 ## Education
 
-### Diploma in Aeronautical Engineering · Universidad Politécnica de Madrid
-`2008 – 2012`
+**MEng Aeronautical Engineering** · Universidad Politécnica de Madrid · 2008 – 2012
 
-### Bachelor's Degree in Computer Science · UNED
-`2012`
-
-### Additional Training
-
-| Course / Certification                    | Institution                    | Year |
-|-------------------------------------------|--------------------------------|------|
-| GitOps Fundamentals                       | Codefresh / CNCF               |      |
-| Kubernetes: Beginner to Expert            | Udemy                          | 2020 |
-| Docker: Beginner to Expert                | Udemy                          | 2020 |
-| Cloud Computing Course                    | Escuela de Organización Ind.   | 2014 |
-| EF SET English Certificate 81/100 (C2)   | EF Education First             |      |
-| Introduction to Cybersecurity             | Cisco Networking Academy       |      |
+**BSc Computer Science** · UNED · 2012
 
 ---
 
-**Languages:** Spanish (native) · English (C2 — bilingual)
+## Certifications & Training
 
-*Generated from [`cv.md`](https://github.com/qtekfun/cv) · last updated: \today*
+| Certification | Issuer | Year |
+|---|---|---|
+| EF SET English Certificate — C2 (81/100) · [cert.efset.org/DfLkb1](https://cert.efset.org/DfLkb1) | EF Education First | — |
+| Kubernetes: Beginner to Expert | Udemy | 2020 |
+| Docker: Beginner to Expert | Udemy | 2020 |
+| GitOps Fundamentals | Codefresh / CNCF | — |
+| Introduction to Cybersecurity | Cisco Networking Academy | — |
+| Cloud Computing | Escuela de Organización Industrial | 2014 |
+
+---
+
+## Languages
+
+**Spanish** — Native · **English** — C2 (bilingual, [verified](https://cert.efset.org/DfLkb1))
+
+---
+
+*CV source: [github.com/qtekfun/cv](https://github.com/qtekfun/cv) · Last updated: April 2026*
